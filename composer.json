@@ -21,7 +21,7 @@
         "laravel/sanctum": "^2.11",
         "laravel/socialite": "^5.0",
         "laravel/tinker": "^2.5",
-        "laravel/ui": "^3.0",
+        "laravel/ui": "^3.4",
         "livewire/livewire": "^2.0",
         "rappasoft/laravel-livewire-tables": "^1.0",
         "rappasoft/lockout": "^3.0",
