@@ -16,7 +16,7 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "jamesmills/laravel-timezone": "^1.9",
         "lab404/laravel-impersonate": "^1.6",
-        "langleyfoxall/laravel-nist-password-rules": "^4.1",
+        "langleyfoxall/laravel-nist-password-rules": "^6.0",
         "laravel/framework": "^8.54",
         "laravel/sanctum": "^2.11",
         "laravel/socialite": "^5.0",
@@ -26,7 +26,7 @@
         "rappasoft/laravel-livewire-tables": "^1.0",
         "rappasoft/lockout": "^3.0",
         "spatie/laravel-activitylog": "^3.14",
-        "spatie/laravel-permission": "^3.11",
+        "spatie/laravel-permission": "^5.10",
         "tabuna/breadcrumbs": "^2.2"
     },
     "require-dev": {
@@ -35,7 +35,7 @@
         "brianium/paratest": "^6.2",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
-        "friendsofphp/php-cs-fixer": "^2.16",
+        "friendsofphp/php-cs-fixer": "^3.14",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^5.0",
