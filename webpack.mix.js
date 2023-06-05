@@ -1,4 +1,4 @@
-const mix = require('laravel-mix');
+const mix = require('laravel-mix')
 
 /*
  |--------------------------------------------------------------------------
@@ -25,15 +25,15 @@ mix.setPublicPath('public')
         'popper.js',
         'axios',
         'sweetalert2',
-        'lodash'
+        'lodash',
     ])
-    .sourceMaps();
+    .sourceMaps()
 
 if (mix.inProduction()) {
-    mix.version();
+    mix.version()
 } else {
     // Uses inline source-maps on development
     mix.webpackConfig({
-        devtool: 'inline-source-map'
-    });
+        devtool: 'inline-source-map',
+    })
 }
