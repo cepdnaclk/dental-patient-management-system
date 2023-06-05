@@ -13,7 +13,7 @@
 
                     <x-slot name="body">
                         <x-forms.post :action="route('frontend.auth.login')">
-                            <div class="form-group row pb-2">
+                            <div class="form-group row">
                                 <label for="email" class="col-md-4 col-form-label text-md-right">@lang('E-mail Address')</label>
 
                                 <div class="col-md-6">
@@ -21,7 +21,11 @@
                                 </div>
                             </div><!--form-group-->
 
+<<<<<<< HEAD
                             <div class="form-group row pb-2">
+=======
+                            <div class="form-group row">
+>>>>>>> production
                                 <label for="password" class="col-md-4 col-form-label text-md-right">@lang('Password')</label>
 
                                 <div class="col-md-6">
@@ -29,7 +33,11 @@
                                 </div>
                             </div><!--form-group-->
 
+<<<<<<< HEAD
                             <div class="form-group row pb-2">
+=======
+                            <div class="form-group row">
+>>>>>>> production
                                 <div class="col-md-6 offset-md-4">
                                     <div class="form-check">
                                         <input name="remember" id="remember" class="form-check-input" type="checkbox" {{ old('remember') ? 'checked' : '' }} />
