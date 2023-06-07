@@ -11,14 +11,10 @@ app/storage/
 public/storage
 public/hot
 
-# Laravel 5 & Lumen specific with changed public path
-public_html/storage
-public_html/hot
-
-/public/css
-/public/js
-/public/fonts
-/public/img
+public/css/
+public/js/
+public/fonts/*
+public/img/
 
 storage/*.key
 .env
