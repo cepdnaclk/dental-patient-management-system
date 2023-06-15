@@ -11,8 +11,8 @@
 
 ## Useful Commands and Instructions
 
-You need to install Wamp server and run it before following commands.
-Please make sure you already created database user account.
+You need to install WAMP or XAMP server and run it before following commands.
+Please make sure you already created a Database and a Database User Account.
 
 #### Install Dependencies
 
@@ -20,25 +20,33 @@ Please make sure you already created database user account.
 // Install PHP dependencies
 composer install
 
-// If you received mmap() error, use this command
-// php -d memory_limit=-1 /usr/local/bin/composer install
-
-// Update PHP dependencies
-composer update
-
 // Install Node dependencies (development mode)
 npm install
 npm run dev
 ```
 
+##### Additional useful commands
+
+```
+// If you received mmap() error, use this command
+php -d memory_limit=-1 /usr/local/bin/composer install
+
+// Update PHP dependencies
+composer update
+
+// Prepare the database
+php artisan migrate
+```
+
 #### Prepare for the first run
+
+First you need to copy `.env.example` and save as `.env` in the root folder, and change the `Admin` and `User` credentials, `Database` configurations.
+
+Next follow the below commands
 
 ```
 // Prepare the public link for storage
 php artisan storage:link
-
-// Prepare the database
-php artisan migrate
 
 // Reset the database and seed the data
 php artisan migrate:fresh --seed
@@ -48,7 +56,7 @@ git config --local core.hooksPath .githooks
 
 ```
 
-#### Serve in the local environment
+#### Serve in the Local environment
 
 ```
 // Serve PHP web server
@@ -57,7 +65,7 @@ php artisan serve
 // Serve PHP web server, in a specific IP & port
 php artisan serve --host=0.0.0.0 --port=8000
 
-// To work with Vue components
+// To work with Vue components, you need to run this in parallel
 npm run watch
 ```
 
@@ -98,19 +106,17 @@ php artisan tinker
 // Run the unit tests
 php artisan test
 
-// Run unit tests in parallel
-php artisan test -p
-
 ```
 
-#### Resource Routes
+#### Resource Routes - Standardard Pattern
 
-| Verb      | URI                             | Action  | Route Name             |
-| :-------- | :------------------------------ | :------ | :--------------------- |
-| GET       | /photos/{photo}/comments        | index   | photos.comments.index  |
-| GET       | /photos/{photo}/comments/create | create  | photos.comments.create |
-| POST      | /photos/{photo}/comments        | store   | photos.comments.store  |
-| GET       | /comments/{comment}             | show    | comments.show          |
-| GET       | /comments/{comment}/edit        | edit    | comments.edit          |
-| PUT/PATCH | /comments/{comment}             | update  | comments.update        |
-| DELETE    | /comments/{comment}             | destroy | comments.destroy       |
+| Verb   | URI                    | Action  | Route Name     |
+| :----- | :--------------------- | :------ | :------------- |
+| GET    | /photos/               | index   | photos.index   |
+| GET    | /photos/create         | create  | photos.create  |
+| GET    | /photos/view/{photo}   | show    | photos.show    |
+| GET    | /photos/edit/{photo}   | edit    | photos.edit    |
+| GET    | /photos/delete/{photo} | delete  | photos.delete  |
+| POST   | /photos/               | store   | photos.store   |
+| PUT    | /photos/{photo}        | update  | photos.update  |
+| DELETE | /photos/{photo}        | destroy | photos.destroy |
