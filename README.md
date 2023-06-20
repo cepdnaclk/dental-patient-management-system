@@ -55,6 +55,14 @@ php artisan migrate:fresh --seed
 git config --local core.hooksPath .githooks
 
 ```
+### Generate encryption key
+```
+// For "No application encryption key has been specified." runtime error
+php artisan key:generate
+
+// If error still exists
+php artisan config:cache
+```
 
 #### Serve in the Local environment
 
