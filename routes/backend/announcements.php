@@ -44,7 +44,7 @@ Route::group([], function () {
         ->name('announcements.delete')
         ->breadcrumbs(function (Trail $trail) {
             $trail->push(__('Home'), route('admin.dashboard'))
-                ->push(__('Announcements'), route('admin.component.index'))
+                ->push(__('Announcements'), route('admin.announcements.index'))
                 ->push(__('Delete'));
         });
 

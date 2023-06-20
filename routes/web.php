@@ -25,8 +25,4 @@ Route::group(['as' => 'frontend.'], function () {
  */
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'admin'], function () {
     includeRouteFiles(__DIR__.'/backend/');
-    // Add the admin/component route
-    Route::get('component', function () {
-        // Handle the component route logic here
-    })->name('component.index');
 });
