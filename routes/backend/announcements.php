@@ -3,7 +3,7 @@
 use Tabuna\Breadcrumbs\Trail;
 use App\Http\Controllers\Backend\AnnouncementController;
 
-Route::middleware(['editAccess'])->group(function () {
+Route::group([], function () {
 
     Route::get('/announcements', function () {
         return view('backend.announcements.index');

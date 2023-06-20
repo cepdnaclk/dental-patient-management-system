@@ -112,7 +112,7 @@ class AnnouncementController extends Controller
     {
         try {
             $announcement->delete();
-            return redirect()->route('admin.announcements.index')->with('Success', 'Annuncement was deleted !');
+            return redirect()->route('admin.announcements.index')->with('Success', 'Announcement was deleted !');
         } catch (\Exception $ex) {
             return abort(500);
         }

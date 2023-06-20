@@ -9,7 +9,7 @@
                 Announcements
             </x-slot>
 
-            @if ($logged_in_user->hasInventoryAccess())
+            @if (1)
                 <x-slot name="headerActions">
                     <x-utils.link icon="c-icon cil-plus" class="card-header-action" :href="route('admin.announcements.create')" :text="__('Create Announcement')">
                     </x-utils.link>
