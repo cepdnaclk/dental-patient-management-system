@@ -1,0 +1,50 @@
+<?php
+
+return [
+    'gender' => [
+        'male' => "Male",
+        'female' => "Female",
+        'other' => "Other",
+    ],
+    'honorific' => [
+        'mr' => "Mr.",
+        'mrs' => "Mrs.",
+        'miss' => "Miss.",
+        'rev' => "Rev.",
+    ],
+    'ethinicity' => [
+        'sinhala' => "Sinhala",
+        'tamil' => "Tamil",
+        'muslim' => "Muslim",
+        'burgher' => "Burgher",
+        'malay' => "Malay",
+        'other' => "Other",
+    ],
+    'district' => [
+        '1' => 'Colombo',
+        '2' => 'Gampaha',
+        '3' => 'Kalutara',
+        '4' => 'Kandy',
+        '5' => 'Matale',
+        '6' => 'Nuwara Eliya',
+        '7' => 'Galle',
+        '8' => 'Matara',
+        '9' => 'Hambantota',
+        '10' => 'Jaffna',
+        '11' => 'Kilinochchi',
+        '12' => 'Mannar',
+        '13' => 'Vavuniya',
+        '14' => 'Mullaitivu',
+        '15' => 'Batticaloa',
+        '16' => 'Ampara',
+        '17' => 'Trincomalee',
+        '18' => 'Kurunegala',
+        '19' => 'Puttalam',
+        '20' => 'Anuradhapura',
+        '21' => 'Polonnaruwa',
+        '22' => 'Badulla',
+        '23' => 'Moneragala',
+        '24' => 'Ratnapura',
+        '25' => 'Kegalle',
+    ]
+];
