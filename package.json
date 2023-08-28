@@ -14,7 +14,7 @@
         "@coreui/icons": "^1.0.1",
         "@fortawesome/fontawesome-free": "^5.12.1",
         "@popperjs/core": "^2.5.1",
-        "alpinejs": "^2.3.5",
+        "alpinejs": "^3.13.0",
         "axios": "^0.21.1",
         "bootstrap": "^4.5.0",
         "cross-env": "^7.0",
