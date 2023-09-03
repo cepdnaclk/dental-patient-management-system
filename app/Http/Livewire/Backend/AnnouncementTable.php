@@ -3,7 +3,6 @@
 namespace App\Http\Livewire\Backend;
 
 use App\Domains\Announcement\Models\Announcement;
-use App\Models\ComponentType;
 use Illuminate\Database\Eloquent\Builder;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
