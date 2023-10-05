@@ -27,7 +27,7 @@
                     </div>
                 @endif
 
-                <livewire:backend.basic-patient-table />
+                <livewire:backend.patient-basic-table />
             </x-slot>
         </x-backend.card>
     </div>
