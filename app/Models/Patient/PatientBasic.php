@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class PatientBasic extends Model
 {
     use HasFactory;
+    
     protected $fillable = [
         'reg_number',
         'name',
@@ -28,6 +29,7 @@ class PatientBasic extends Model
         'medical_history',
         'current_medications',
         'special_referrals' , 
+        'entered_by'
        
     ];
 
@@ -38,7 +40,14 @@ class PatientBasic extends Model
         'relative' => 'Family Relative',
     ];
 
-    //pasan made
+    public const ENTERED_BYS = [
+        'doctor'=>'Doctor',
+        'medicle student'=>'Medicle Student',
+        'patient'=>'Patient',
+        'other'=>'Other',
+    ];
+
+    //
     protected $dates=[
         'dob',
         'initial_visit',
@@ -60,7 +69,7 @@ class PatientBasic extends Model
         // TODO: implement 
     }
 
-    //pasan made
+    //
     public static function genders()
     {
         return [
@@ -70,7 +79,7 @@ class PatientBasic extends Model
         ];
     }  
 
-    public static function ethnicities()
+    public static function ethinicities()
     {
         return[
         'sinhala' => "Sinhala",
@@ -142,4 +151,5 @@ class PatientBasic extends Model
             'other'=>'Other',
         ];
     }
+   
 }

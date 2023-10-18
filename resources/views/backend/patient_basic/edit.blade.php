@@ -18,8 +18,13 @@
             </x-slot>
 
             <x-slot name="body">
-
-
+            <!--Reg_no-->
+            <div class="form-group row">
+                    <label for="reg_number" class="col-md-2 col-form-label">@lang('Registration number')</label>
+                    <div class="col-md-10">
+                        <input type="text" name="reg_number" class="form-control" placeholder="{{ __('Regitration Number') }}" value="{{ old('reg_number') }}" maxlength="100" required />
+                    </div>
+                </div>
             </x-slot>
             <x-slot name="footer">
                 {!! Form::submit('Update', ['class' => 'btn btn-primary float-right']) !!}

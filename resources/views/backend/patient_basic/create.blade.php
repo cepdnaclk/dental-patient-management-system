@@ -18,9 +18,11 @@
             </x-slot>
 
             <x-slot name="body">
+
+        
     
             <!--Reg_no-->
-            <div class="form-group row">
+                <div class="form-group row">
                     <label for="reg_number" class="col-md-2 col-form-label">@lang('Registration number')</label>
                     <div class="col-md-10">
                         <input type="text" name="reg_number" class="form-control" placeholder="{{ __('Regitration Number') }}" value="{{ old('reg_number') }}" maxlength="100" required />
@@ -39,7 +41,7 @@
                 <div class="form-group row">
                     {!! Form::label('dob', 'Date Of Birth', ['class' => 'col-md-2 col-form-label']) !!}
                     <div class="col-md-4 pt-3">
-                       {!! Form::datetimeLocal('dob', '', ['class'=>'form-control', 'required'=>true,]) !!}
+                       {!! Form::date('dob', '', ['class'=>'form-control', 'required'=>true,]) !!}
                        @error('dob')
                        <strong>{{ $message }}</strong>
                        @enderror
@@ -72,11 +74,11 @@
             
             <!--Ethinicity-->
             <div class="form-group row">
-                    {!! Form::label('ethnicity', 'Ethnicity', ['class' => 'col-md-2 col-form-label']) !!}
+                    {!! Form::label('ethinicity', 'Ethinicity', ['class' => 'col-md-2 col-form-label']) !!}
 
                    <div class="col-md-10">
-                       {!! Form::select('ethnicity', $ethnicities, null, ['class'=>'form-control', 'required'=>true, 'placeholder' => '']) !!}
-                       @error('ethnicity')
+                       {!! Form::select('ethinicity', $ethinicities, null, ['class'=>'form-control', 'required'=>true, 'placeholder' => '']) !!}
+                       @error('ethinicity')
                        <strong>{{ $message }}</strong>
                        @enderror
                    </div>
@@ -225,6 +227,7 @@
                        @enderror
                     </div>
                 </div>
+
 
             
 

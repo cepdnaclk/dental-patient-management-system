@@ -27,37 +27,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'admin'], f
     includeRouteFiles(__DIR__.'/backend/');
 });
 
-//pasn made
-Route::get('/create',function(){
-    return view('create');
+Route::group(['prefix' => 'patient', 'as' => 'patient.', 'middleware' => 'auth'], function () {
+    Route::get('create', [PatientController::class, 'create'])->name('create'); // Show the patient creation form
+    Route::post('store', [PatientController::class, 'store'])->name('store'); // Store a new patient
+    Route::get('list', [PatientController::class, 'list'])->name('list'); // List all patients
+    // Add more patient-related routes as needed
 });
-
-//pasan made
-Route::post('/create',function(){
-    $patient_basic = new PatientBasic();
-    $patient_basic -> reg_number=request('reg_number');
-    $patient_basic -> name=request('name');
-    $patient_basic -> dob=request('dob');
-    $patient_basic -> initial_visit=request('initial_visit');
-    $patient_basic -> gender=request('gender');
-    $patient_basic -> ethinicity=request('ethinicity');
-    $patient_basic -> honorific=request('honorific');
-    $patient_basic -> district=request('district');
-    $patient_basic -> contact_addresse=request('contact_address');
-    $patient_basic -> contact_tele=request('contact_tele');
-    $patient_basic -> guardian_name=request('guardian_name');
-    $patient_basic -> guardian_tele=request('guardian_tele');
-    $patient_basic -> guardian_address=request('guardian_address');
-    $patient_basic -> guardian_relationship=request('guardian_relationship');
-    $patient_basic -> presenting_complain_co=request('presenting_complain_co');
-    $patient_basic -> presenting_complain_ho=request('presenting_complain_ho');
-    $patient_basic -> medical_history=request('medical_history');
-    $patient_basic -> current_medications=request('current_medications');
-    $patient_basic -> special_referrals=request('special_referrals');
-    $patient_basic -> entered_by=request('entered_by');
-    $patient_basic -> save();
-    return redirect('/create');
-});
-
-
-

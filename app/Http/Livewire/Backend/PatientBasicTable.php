@@ -16,6 +16,8 @@ class PatientBasicTable extends DataTableComponent
     public function columns(): array
     {
         return [
+            Column::make("Patient ID", "id")
+                ->sortable(),
             Column::make("Registration Number", "reg_number")
                 ->sortable(),
             Column::make("Actions")
@@ -24,13 +26,29 @@ class PatientBasicTable extends DataTableComponent
 
     public function query(): Builder
     {
-        return PatientBasic::query();
+        return PatientBasic::query()
+            ->when($this->getFilter('honorific'), fn ($query, $status) => $query->where('honorific', $status))
+            ->when($this->getFilter('district'), fn ($query, $type) => $query->where('district', $type));
     }
 
-    // TODO
-    // public function filters(): array
-    // {
-    // }
+     public function filters(): array
+    {
+        $honorific= ["" => "Any"];
+        foreach (PatientBasic::honorifics() as $key => $value) {
+            $honorific[$key] = $value;
+        }
+        $district= ["" => "Any"];
+        foreach (PatientBasic::districts() as $key => $value) {
+            $district[$key] = $value;
+        }
+
+        return [
+            'honorific' => Filter::make('Honorific')
+                ->select($honorific),
+            'district' => Filter::make('District')
+                ->select($district),
+        ];
+    }
 
     public function rowView(): string
     {

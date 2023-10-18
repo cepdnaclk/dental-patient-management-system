@@ -99,3 +99,5 @@ Our solution, known as "Dental Patient Management," is a web-based application t
 - [University of Peradeniya](https://eng.pdn.ac.lk/)
 
 
+[//]: # (Please refer this to learn more about Markdown syntax)
+[//]: # (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)

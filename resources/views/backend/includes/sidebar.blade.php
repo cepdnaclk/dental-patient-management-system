@@ -96,6 +96,21 @@
                             :active="activeClass(Route::is('admin.patient_basic.*'), 'c-active')"></x-utils.link>
                     </li>
                 </ul>
+
+                <ul class="c-sidebar-nav-dropdown-items">
+                    <li class="c-sidebar-nav-item">
+                        <x-utils.link :href="route('admin.patient_habit.index')" class="c-sidebar-nav-link" :text="__('Habits')"
+                            :active="activeClass(Route::is('admin.patient_habit.*'), 'c-active')"></x-utils.link>
+                    </li>
+                </ul>
+
+                 {{-- Patient Hygienes --}}
+                <ul class="c-sidebar-nav-dropdown-items">
+                    <li class="c-sidebar-nav-item">
+                        <x-utils.link :href="route('admin.patient_hygiene.index')" class="c-sidebar-nav-link" :text="__('Hygienes')"
+                            :active="activeClass(Route::is('admin.patient_habit.*'), 'c-active')"></x-utils.link>
+                    </li>
+                </ul>  
             </li>
         @endif
 
