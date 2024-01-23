@@ -94,6 +94,8 @@
                     <li class="c-sidebar-nav-item">
                         <x-utils.link :href="route('admin.patient_basic.index')" class="c-sidebar-nav-link" :text="__('Manage')"
                             :active="activeClass(Route::is('admin.patient_basic.*'), 'c-active')"></x-utils.link>
+                        <x-utils.link :href="route('admin.patient_habits.index')" class="c-sidebar-nav-link" :text="__('Patient Habits')"
+                            :active="activeClass(Route::is('admin.patient_habits.*'), 'c-active')"></x-utils.link>
                     </li>
                 </ul>
             </li>
